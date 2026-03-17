@@ -3,7 +3,41 @@
 A high-end BepInEx plugin designed to enhance your **The Bazaar** experience with real-time data, searchable databases, and community-sourced Meta builds.
 
 > [!IMPORTANT]
-> **This plugin requires BepInEx to function.** You must install BepInEx before adding this plugin to your game.
+> **Mandatory Requirements:**
+> 1. **BepInEx 5.x**: Required to load the plugin.
+> 2. **Python 3.x**: Required by the installer to generate live Meta data and images.
+
+---
+
+## 📦 Prerequisites (Mandatory)
+
+### 1. BepInEx 5.x
+To use this plugin, you **must** have **BepInEx 5.x (x64)** installed in your game directory.
+1. Download BepInEx 5.4.x from the [official repository](https://github.com/BepInEx/BepInEx/releases).
+2. Extract it into your "The Bazaar" folder (where `TheBazaar.exe` is).
+3. Run the game once to initialize BepInEx.
+
+### 2. Python 3.x
+The installer needs Python to download the latest builds from Jota's spreadsheet and extract board images.
+1. **Download**: Install Python from [python.org](https://www.python.org/downloads/) or the Microsoft Store.
+2. **Setup**: During installation, check the box **"Add Python to PATH"**.
+3. **How to find your Python path?**
+   *   Open a terminal (CMD or PowerShell) and type: `where python`
+   *   It will show you the exact path (e.g., `C:\Users\...\Programs\Python\Python310\python.exe`).
+
+---
+
+## 🚀 Version 0.2 Release
+
+The latest release includes a **Smart Installer** that fetches live data for you!
+
+### 📥 Download & Install
+1. Download the latest **`BazaarPlugin_v0.2_Release.zip`** from the [Releases](https://github.com/paulinFa/BazaarPlugin/releases) page.
+2. Extract the zip folder.
+3. Run **`BazaarInstaller.exe`**.
+4. Select your "The Bazaar" game folder.
+5. If Python is not found automatically, the installer will ask you to select your `python.exe`.
+6. The installer will automatically install required libraries (`requests`, `Pillow`) and deploy the plugin.
 
 ---
 
@@ -12,16 +46,7 @@ A high-end BepInEx plugin designed to enhance your **The Bazaar** experience wit
 > [!TIP]
 > *Insert screenshots of the Database (F8), Meta Browser (F7), and In-game Hover (F6) here.*
 
-BazaarPlugin is the ultimate companion for players who want to dive deep into the game's mechanics. Whether you're a newcomer looking for the best builds or a veteran searching for specific item interactions, this plugin provides all the tools you need directly in-game.
-
----
-
-## 📦 Prerequisites (Mandatory)
-
-To use this plugin, you **must** have **BepInEx 5.x (x64)** installed in your game directory.
-1. Download BepInEx 5.4.x from the [official repository](https://github.com/BepInEx/BepInEx/releases).
-2. Extract it into your "The Bazaar" folder (where `TheBazaar.exe` is).
-3. Run the game once to initialize BepInEx.
+BazaarPlugin provides all the tools you need directly in-game: real-time monster info, a searchable card database, and the latest community builds.
 
 ---
 
@@ -30,24 +55,16 @@ To use this plugin, you **must** have **BepInEx 5.x (x64)** installed in your ga
 ### 1. 🗃️ The Bazaar Database (F8)
 *   **Search Anything**: Instantly find stats for any Item or Skill in the game.
 *   **Deep Filters**: Filter by Hero, Official Tags, or even **Hidden Mechanics** (Burn, Crit, Haste, etc.).
-*   **Detailed View**: Click a card to see its full description, cooldown progression across tiers, and all available enchantments.
 
 ### 2. 🏆 Meta Browser (F7)
 *   **Jota's builds**: Community-curated builds directly from Jota's Meta spreadsheet.
-*   **Board Visuals**: See high-quality screenshots of endgame boards for every archetype.
-*   **Strategy**: Get tips on core items and how to pilot each build.
+*   **Board Visuals**: Live-fetched screenshots of endgame boards for every archetype.
 
 ### 3. 👾 Monster Insights (F5)
-*   **Know your enemy**: Hover over any monster in-game and press F5 to see its detailed visual info.
-*   **Full Resolution**: High-definition monster portraits used for strategic planning.
+*   **Know your enemy**: Hover over any monster in-game and press F5 to see its portrait.
 
 ### 4. 🔍 Smart Hover (F6)
-*   **In-Game HUD**: Hover over any card in your shop, hand, or inventory to see a detailed overlay.
-*   **Always Updated**: Fetches data directly from your local database for 100% accuracy.
-
-### 5. 🛡️ User Experience
-*   **Modern UI**: Sleek, dark-themed interface with gold and cyan accents.
-*   **Focus Mode (F9)**: Highlights the hovered card in the database automatically.
+*   **In-Game HUD**: Hover over any card to see a detailed data overlay.
 
 ---
 
@@ -63,37 +80,18 @@ To use this plugin, you **must** have **BepInEx 5.x (x64)** installed in your ga
 
 ---
 
-## 🚀 Installation & Setup
-
-1. **Clone the Repository** (or download the Release zip).
-2. **Initial Setup**:
-   *   Double-click **`SETUP_PLUGIN.bat`**.
-   *   A window will appear: **Select your "The Bazaar" game folder**.
-   *   The script will automatically fetch game data, download Meta builds, and configure paths.
-3. **Build & Update**:
-   *   Run **`build_and_deploy.ps1`** to compile and copy all assets to your game folder.
-
----
-
 ## 🚧 Future Features (Roadmap)
 
-We are constantly improving the plugin. Here is what's coming next:
-*   🛡️ **Input Protection**: Blocking mouse scrolling and clicks for the background game when interacting with the plugin UI.
-*   🖼️ **Visual Database**: Displaying high-quality images for all items and skills in the F8 database.
-*   📜 **Event Details**: Deep-dive into event choices, showing exactly what each option gives or takes.
+*   🛡️ **Input Protection**: Blocking mouse interactions for the background game.
+*   🖼️ **Visual Database**: High-quality icons for all items in the F8 menu.
+*   📜 **Event Details**: Showing detailed results for every event choice.
 *   📊 **HUD Overhaul**: A more integrated and customizable in-game HUD for better readability.
-*   🔄 **Live Sync**: Automatic detection of game updates to refresh the `cards.json` parser.
 
 ---
 
-## 📁 Project Structure
+## 📁 Project Structure (Developers)
 
-*   `BazaarPlugin/`: C# source code for the plugin.
-*   `data_source/`: Raw `cards.json` fetched from the game.
-*   `meta_source/`: Source Excel file for Meta builds.
-*   `mobs/`: Source images for monster portraits.
+*   `BazaarPlugin/`: C# source code.
 *   `scripts/`: Python utility scripts for data processing.
-*   `SETUP_PLUGIN.bat`: One-click setup and configuration.
-*   `build_and_deploy.ps1`: Automated build and deployment script.
-
----
+*   `SETUP_PLUGIN.bat`: One-click developer setup.
+*   `build_and_deploy.ps1`: Automated build and deployment.
