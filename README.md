@@ -2,6 +2,27 @@
 
 A high-end BepInEx plugin designed to enhance your **The Bazaar** experience with real-time data, searchable databases, and community-sourced Meta builds.
 
+> [!IMPORTANT]
+> **This plugin requires BepInEx to function.** You must install BepInEx before adding this plugin to your game.
+
+---
+
+## 📸 Presentation & Visuals
+
+> [!TIP]
+> *Insert screenshots of the Database (F8), Meta Browser (F7), and In-game Hover (F6) here.*
+
+BazaarPlugin is the ultimate companion for players who want to dive deep into the game's mechanics. Whether you're a newcomer looking for the best builds or a veteran searching for specific item interactions, this plugin provides all the tools you need directly in-game.
+
+---
+
+## 📦 Prerequisites (Mandatory)
+
+To use this plugin, you **must** have **BepInEx 5.x (x64)** installed in your game directory.
+1. Download BepInEx 5.4.x from the [official repository](https://github.com/BepInEx/BepInEx/releases).
+2. Extract it into your "The Bazaar" folder (where `TheBazaar.exe` is).
+3. Run the game once to initialize BepInEx.
+
 ---
 
 ## ✨ Key Features
@@ -25,7 +46,6 @@ A high-end BepInEx plugin designed to enhance your **The Bazaar** experience wit
 *   **Always Updated**: Fetches data directly from your local database for 100% accuracy.
 
 ### 5. 🛡️ User Experience
-*   **Input Protection**: Mouse scrolling and clicks are blocked for the background game when interacting with the plugin UI. No more accidental camera zooming!
 *   **Modern UI**: Sleek, dark-themed interface with gold and cyan accents.
 *   **Focus Mode (F9)**: Highlights the hovered card in the database automatically.
 
@@ -45,17 +65,24 @@ A high-end BepInEx plugin designed to enhance your **The Bazaar** experience wit
 
 ## 🚀 Installation & Setup
 
-1. **Clone the Repository**: Download the project to your local machine.
+1. **Clone the Repository** (or download the Release zip).
 2. **Initial Setup**:
    *   Double-click **`SETUP_PLUGIN.bat`**.
    *   A window will appear: **Select your "The Bazaar" game folder**.
-   *   The script will automatically:
-       *   Fetch `cards.json` from the game files.
-       *   Download the latest Meta Excel from Google Sheets.
-       *   Extract board images and build the database.
-       *   Configure the deployment paths.
+   *   The script will automatically fetch game data, download Meta builds, and configure paths.
 3. **Build & Update**:
-   *   Run **`build_and_deploy.ps1`** (via PowerShell) to compile the C# code and copy all assets to your game folder.
+   *   Run **`build_and_deploy.ps1`** to compile and copy all assets to your game folder.
+
+---
+
+## 🚧 Future Features (Roadmap)
+
+We are constantly improving the plugin. Here is what's coming next:
+*   🛡️ **Input Protection**: Blocking mouse scrolling and clicks for the background game when interacting with the plugin UI.
+*   🖼️ **Visual Database**: Displaying high-quality images for all items and skills in the F8 database.
+*   📜 **Event Details**: Deep-dive into event choices, showing exactly what each option gives or takes.
+*   📊 **HUD Overhaul**: A more integrated and customizable in-game HUD for better readability.
+*   🔄 **Live Sync**: Automatic detection of game updates to refresh the `cards.json` parser.
 
 ---
 
@@ -70,12 +97,3 @@ A high-end BepInEx plugin designed to enhance your **The Bazaar** experience wit
 *   `build_and_deploy.ps1`: Automated build and deployment script.
 
 ---
-
-## 🧪 Technical Stack
-
-*   **Plugin**: C# (.NET Framework 4.8) + BepInEx 5 + Harmony.
-*   **Data**: Python 3 + `requests` + `Pillow` for image extraction and JSON parsing.
-*   **UI**: Unity IMGUI with custom high-definition textures.
-
----
-*Created with ❤️ for The Bazaar community.*
