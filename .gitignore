@@ -1,0 +1,19 @@
+# Visual Studio 2015+
+.vs/
+[Bb]in/
+[Oo]bj/
+packages/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# BepInEx / Managed DLLs (should not be in git)
+*.dll
+!BazaarPlugin/bin/Release/BazaarPlugin.dll
+*.pdb
+*.xml
+
+# User-specific
+.DS_Store
+*.swp
