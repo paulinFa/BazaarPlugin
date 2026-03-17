@@ -36,7 +36,7 @@ namespace BazaarPlugin
                 _searchScroll = DrawContent(card, _searchScroll, SearchRect.width, () => DatabaseUI.Selected = null);
                 DatabaseUI.HandleResize(id, ref SearchRect);
                 GUI.DragWindow(new Rect(0, 0, 10000, 30));
-            }, "DÉTAILS (RECHERCHE)", DatabaseUI.WinStyle);
+            }, "◈ CARD DETAILS (SEARCH)", DatabaseUI.WinStyle);
         }
 
         public static void DrawHover(CardData card)
@@ -51,12 +51,12 @@ namespace BazaarPlugin
                 _hoverScroll = DrawContent(card, _hoverScroll, HoverRect.width, () => Plugin.InGameHoveredCard = null);
                 DatabaseUI.HandleResize(id, ref HoverRect);
                 GUI.DragWindow(new Rect(0, 0, 10000, 30));
-            }, "DÉTAILS (IN-GAME HOVER)", DatabaseUI.WinStyle);
+            }, "◈ CARD DETAILS (HOVER)", DatabaseUI.WinStyle);
         }
 
         private static Vector2 DrawContent(CardData card, Vector2 scroll, float currentWidth, Action onClose)
         {
-            GUI.DrawTexture(new Rect(0, 0, currentWidth, 3), Plugin.MakeTex(2, 2, new Color(0f, 0.9f, 1f, 0.8f)));
+            GUI.DrawTexture(new Rect(0, 0, currentWidth, 3), Plugin.TexCyanLine);
 
             if (GUI.Button(new Rect(currentWidth - 40, 10, 30, 30), "<color=#FF6666><b>✖</b></color>", DatabaseUI.CloseBtnStyle))
             {
@@ -67,40 +67,46 @@ namespace BazaarPlugin
             GUILayout.Space(15);
 
             GUILayout.BeginHorizontal();
-            GUILayout.Label($"<size=30><b><color=#FFF8E7>{card.Name}</color></b></size>", DatabaseUI.LabelStyle);
+            GUILayout.Label($"<size=32><b><color=#FFF8E7>{card.Name}</color></b></size>", DatabaseUI.LabelStyle);
             GUILayout.FlexibleSpace();
             if (!string.IsNullOrEmpty(card.Cooldown))
-                GUILayout.Label($"<size=20><color=#F4B41A><b>CD:</b> {card.Cooldown}</color></size>", DatabaseUI.LabelStyle);
+                GUILayout.Label($"<size=22><color=#F4B41A><b>◈ {card.Cooldown}</b></color></size>", DatabaseUI.LabelStyle);
             GUILayout.Space(30);
             GUILayout.EndHorizontal();
 
-            GUILayout.Space(10);
+            GUILayout.Space(12);
 
             GUILayout.BeginHorizontal();
-            if (card.Heroes.Count > 0) DrawB("HERO: " + card.Heroes[0], Plugin.GetElementColor(card.Heroes[0]));
-            DrawB("TIER: " + card.Tier, Plugin.GetElementColor(card.Tier));
-            if (!string.IsNullOrEmpty(card.Size)) DrawB("SIZE: " + card.Size, Plugin.GetElementColor(card.Size));
+            if (card.Heroes.Count > 0) DrawB(card.Heroes[0], Plugin.GetElementColor(card.Heroes[0]));
+            DrawB(card.Tier, Plugin.GetElementColor(card.Tier));
+            if (!string.IsNullOrEmpty(card.Size)) DrawB(card.Size, Plugin.GetElementColor(card.Size));
+            
             if (card.Tags != null)
             {
-                foreach (var tag in card.Tags) DrawB(tag, Plugin.GetElementColor(tag));
-            }
-            if (card.HiddenTags != null)
-            {
-                foreach (var hTag in card.HiddenTags) DrawB(hTag, Plugin.GetElementColor(hTag));
+                foreach (var tag in card.Tags) DrawB(tag, "#A39EBD");
             }
             GUILayout.EndHorizontal();
 
+            if (card.HiddenTags != null && card.HiddenTags.Count > 0)
+            {
+                GUILayout.Space(5);
+                GUILayout.BeginHorizontal();
+                foreach (var hTag in card.HiddenTags) DrawB("★ " + hTag, Plugin.GetElementColor(hTag));
+                GUILayout.EndHorizontal();
+            }
+
             GUILayout.Space(25);
 
+            GUIStyle dStyle = new GUIStyle(GUI.skin.label) { richText = true, wordWrap = true, fontSize = 18, normal = { textColor = new Color(0.9f, 0.9f, 1f) } };
             GUILayout.BeginVertical(_descBoxStyle);
-            GUILayout.Label(card.Description, new GUIStyle(GUI.skin.label) { richText = true, wordWrap = true, fontSize = 17 });
+            GUILayout.Label(card.Description, dStyle);
             GUILayout.EndVertical();
 
             if (card.Enchantments != null && card.Enchantments.Count > 0)
             {
-                GUILayout.Space(30);
-                GUILayout.Label("<color=#A39EBD><size=13><b>ENCHANTEMENTS DISPONIBLES</b></size></color>", DatabaseUI.LabelStyle);
-                GUILayout.Space(10);
+                GUILayout.Space(35);
+                GUILayout.Label("<color=#F4B41A><size=14><b>AVAILABLE ENCHANTMENTS</b></size></color>", DatabaseUI.LabelStyle);
+                GUILayout.Space(12);
 
                 int count = 0; GUILayout.BeginHorizontal();
                 foreach (var e in card.Enchantments)
@@ -109,16 +115,18 @@ namespace BazaarPlugin
                     Color mainCol = GetEColor(e.Key);
                     GUIStyle boxS = new GUIStyle(GUI.skin.box)
                     {
-                        normal = { background = Plugin.MakeTex(2, 2, new Color(mainCol.r, mainCol.g, mainCol.b, 0.12f)) },
+                        normal = { background = Plugin.MakeTex(2, 2, new Color(mainCol.r, mainCol.g, mainCol.b, 0.15f)) },
                         padding = new RectOffset(15, 15, 15, 15),
-                        margin = new RectOffset(0, 8, 0, 8)
+                        margin = new RectOffset(0, 10, 0, 10)
                     };
 
-                    GUILayout.BeginVertical(boxS, GUILayout.Width(currentWidth / 3 - 22), GUILayout.Height(130));
-                    GUILayout.Label($"<color={hex}><size=14><b>{e.Key.ToUpper()}</b></size></color>", _enchTitleStyle);
+                    GUILayout.BeginVertical(boxS, GUILayout.Width(currentWidth / 3 - 25), GUILayout.Height(140));
+                    GUILayout.Label($"<color={hex}><size=15><b>{e.Key.ToUpper()}</b></size></color>", _enchTitleStyle);
+                    
                     Rect lineRect = GUILayoutUtility.GetRect(1f, 2f, GUILayout.ExpandWidth(true));
-                    GUI.DrawTexture(lineRect, Plugin.MakeTex(2, 2, new Color(mainCol.r, mainCol.g, mainCol.b, 0.3f)));
-                    GUILayout.Space(8);
+                    GUI.DrawTexture(lineRect, Plugin.MakeTex(2, 2, new Color(mainCol.r, mainCol.g, mainCol.b, 0.4f)));
+                    
+                    GUILayout.Space(10);
                     GUILayout.Label($"<size=13><color=#EAEAEA>{e.Value}</color></size>", new GUIStyle(GUI.skin.label) { richText = true, wordWrap = true });
                     GUILayout.EndVertical();
 
@@ -130,7 +138,7 @@ namespace BazaarPlugin
             GUILayout.EndScrollView();
 
             GUILayout.Space(15);
-            if (GUILayout.Button("<color=#AAAAAA><b>FERMER LA FICHE</b></color>", DatabaseUI.BtnStyle, GUILayout.Height(40)))
+            if (GUILayout.Button("<color=#666677><b>CLOSE DETAILS</b></color>", DatabaseUI.BtnStyle, GUILayout.Height(40)))
             {
                 onClose?.Invoke();
             }

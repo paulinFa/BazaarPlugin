@@ -32,12 +32,45 @@ namespace BazaarPlugin
             if (_init && WinStyle != null) return;
 
             LabelStyle = new GUIStyle(GUI.skin.label) { richText = true };
-            WinStyle = new GUIStyle(GUI.skin.window) { normal = { background = Plugin.TexBg }, onNormal = { background = Plugin.TexBg }, padding = new RectOffset(15, 15, 25, 15) };
-            SearchStyle = new GUIStyle(GUI.skin.textField) { normal = { background = Plugin.TexInput, textColor = Color.white }, padding = new RectOffset(12, 12, 10, 10), fontSize = 15 };
-            ItemStyle = new GUIStyle(GUI.skin.button) { normal = { background = Plugin.TexPanel, textColor = new Color(0.9f, 0.9f, 0.9f) }, hover = { background = Plugin.TexBtnHover }, alignment = TextAnchor.MiddleLeft, richText = true, padding = new RectOffset(15, 15, 12, 12), margin = new RectOffset(0, 0, 4, 4) };
-            BtnStyle = new GUIStyle(GUI.skin.button) { normal = { background = Plugin.TexBtn }, hover = { background = Plugin.TexBtnHover }, richText = true, alignment = TextAnchor.MiddleCenter, padding = new RectOffset(0, 0, 0, 0) };
-            BtnActiveStyle = new GUIStyle(BtnStyle) { normal = { background = Plugin.TexBtnActiveDark } };
-            CloseBtnStyle = new GUIStyle(BtnStyle) { normal = { background = Plugin.TexPanel }, hover = { background = Plugin.MakeTex(2, 2, new Color(0.8f, 0.2f, 0.2f)) } };
+            WinStyle = new GUIStyle(GUI.skin.window) { 
+                normal = { background = Plugin.TexBg, textColor = new Color(0.957f, 0.706f, 0.102f) }, 
+                onNormal = { background = Plugin.TexBg, textColor = new Color(0.957f, 0.706f, 0.102f) }, 
+                padding = new RectOffset(15, 15, 30, 15),
+                fontSize = 14,
+                fontStyle = FontStyle.Bold
+            };
+            
+            SearchStyle = new GUIStyle(GUI.skin.textField) { 
+                normal = { background = Plugin.TexInput, textColor = Color.white }, 
+                padding = new RectOffset(12, 12, 10, 10), 
+                fontSize = 15 
+            };
+            
+            ItemStyle = new GUIStyle(GUI.skin.button) { 
+                normal = { background = Plugin.TexPanel, textColor = new Color(0.9f, 0.9f, 0.9f) }, 
+                hover = { background = Plugin.TexBtnHover }, 
+                alignment = TextAnchor.MiddleLeft, 
+                richText = true, 
+                padding = new RectOffset(15, 15, 12, 12), 
+                margin = new RectOffset(0, 0, 4, 4) 
+            };
+            
+            BtnStyle = new GUIStyle(GUI.skin.button) { 
+                normal = { background = Plugin.TexBtn, textColor = new Color(0.7f, 0.7f, 0.8f) }, 
+                hover = { background = Plugin.TexBtnHover, textColor = Color.white }, 
+                richText = true, 
+                alignment = TextAnchor.MiddleCenter, 
+                padding = new RectOffset(5, 5, 5, 5) 
+            };
+            
+            BtnActiveStyle = new GUIStyle(BtnStyle) { 
+                normal = { background = Plugin.TexBtnActiveDark, textColor = new Color(0.957f, 0.706f, 0.102f) } 
+            };
+            
+            CloseBtnStyle = new GUIStyle(BtnStyle) { 
+                normal = { background = Plugin.TexPanel }, 
+                hover = { background = Plugin.MakeTex(2, 2, new Color(0.8f, 0.2f, 0.2f)) } 
+            };
 
             AccordionStyle = new GUIStyle(GUI.skin.button)
             {
@@ -45,7 +78,9 @@ namespace BazaarPlugin
                 hover = { background = null, textColor = Color.white },
                 alignment = TextAnchor.MiddleLeft,
                 richText = true,
-                padding = new RectOffset(0, 0, 5, 5)
+                padding = new RectOffset(0, 0, 8, 8),
+                fontSize = 13,
+                fontStyle = FontStyle.Bold
             };
 
             _init = true;
@@ -60,10 +95,11 @@ namespace BazaarPlugin
             WinRect = GUILayout.Window(99, WinRect, (id) => {
                 GUI.DrawTexture(new Rect(0, 0, WinRect.width, 3), Plugin.TexGoldLine);
 
+                GUILayout.Space(5);
                 GUILayout.BeginHorizontal();
                 _query = GUILayout.TextField(_query, SearchStyle, GUILayout.Height(40));
 
-                if (GUILayout.Button("<color=#FF6666><b>✖ CLEAR</b></color>", CloseBtnStyle, GUILayout.Width(80), GUILayout.Height(40)))
+                if (GUILayout.Button("<color=#FF6666><b>✖</b></color>", CloseBtnStyle, GUILayout.Width(40), GUILayout.Height(40)))
                 {
                     _query = "";
                     _activeCats.Clear(); _activeHeroes.Clear(); _activeTags.Clear(); _activeSizes.Clear(); _activeHiddenTags.Clear();
@@ -74,11 +110,11 @@ namespace BazaarPlugin
                 if (GUI.changed) Refresh(db);
                 GUILayout.Space(12);
 
-                DrawAccordionSection("CATÉGORIE", ref _showCat, _activeCats, new[] { "Item", "Skill", "Encounter" }, new[] { "ITEMS", "SKILLS", "EVENTS" }, db);
-                DrawAccordionSection("HÉROS", ref _showHero, _activeHeroes, new[] { "Pygmalien", "Dooley", "Vanessa", "Mak", "Stelle", "Jules", "Karnok", "Common" }, new[] { "PYG", "DOO", "VAN", "MAK", "STE", "JUL", "KAR", "ALL" }, db, 4);
-                DrawAccordionSection("TAG OFFICIEL", ref _showTag, _activeTags, new[] { "Weapon", "Food", "Tool", "Tech", "Property", "Potion", "Friend", "Apparel", "Core", "Aquatic", "Dinosaur", "Relic", "Loot" }, new[] { "WEAPON", "FOOD", "TOOL", "TECH", "PROPERTY", "POTION", "FRIEND", "APPAREL", "CORE", "AQUATIC", "DINO", "RELIC", "LOOT" }, db, 4);
-                DrawAccordionSection("MÉCANIQUES (CACHÉES)", ref _showHiddenTag, _activeHiddenTags, new[] { "Ammo", "Burn", "Charge", "Cooldown", "Crit", "Damage", "XP", "Flying", "Freeze", "Gold", "Haste", "Heal", "Health", "Income", "Level", "Poison", "Regen", "Shield", "Slow", "Value" }, new[] { "AMMO", "BURN", "CHARGE", "COOLDOWN", "CRIT", "DAMAGE", "XP", "FLYING", "FREEZE", "GOLD", "HASTE", "HEAL", "HEALTH", "INCOME", "LEVEL", "POISON", "REGEN", "SHIELD", "SLOW", "VALUE" }, db, 4);
-                DrawAccordionSection("TAILLE", ref _showSize, _activeSizes, new[] { "Small", "Medium", "Large" }, new[] { "SMALL", "MEDIUM", "LARGE" }, db);
+                DrawAccordionSection("CATEGORY", ref _showCat, _activeCats, new[] { "Item", "Skill", "Encounter" }, new[] { "ITEMS", "SKILLS", "EVENTS" }, db);
+                DrawAccordionSection("HERO", ref _showHero, _activeHeroes, new[] { "Pygmalien", "Dooley", "Vanessa", "Mak", "Stelle", "Jules", "Karnok", "Common" }, new[] { "PYG", "DOO", "VAN", "MAK", "STE", "JUL", "KAR", "ALL" }, db, 4);
+                DrawAccordionSection("OFFICIAL TAGS", ref _showTag, _activeTags, new[] { "Weapon", "Food", "Tool", "Tech", "Property", "Potion", "Friend", "Apparel", "Core", "Aquatic", "Dinosaur", "Relic", "Loot" }, new[] { "WEAPON", "FOOD", "TOOL", "TECH", "PROPERTY", "POTION", "FRIEND", "APPAREL", "CORE", "AQUATIC", "DINO", "RELIC", "LOOT" }, db, 4);
+                DrawAccordionSection("MECHANICS (HIDDEN)", ref _showHiddenTag, _activeHiddenTags, new[] { "Ammo", "Burn", "Charge", "Cooldown", "Crit", "Damage", "XP", "Flying", "Freeze", "Gold", "Haste", "Heal", "Health", "Income", "Level", "Poison", "Regen", "Shield", "Slow", "Value" }, new[] { "AMMO", "BURN", "CHARGE", "COOLDOWN", "CRIT", "DAMAGE", "XP", "FLYING", "FREEZE", "GOLD", "HASTE", "HEAL", "HEALTH", "INCOME", "LEVEL", "POISON", "REGEN", "SHIELD", "SLOW", "VALUE" }, db, 4);
+                DrawAccordionSection("SIZE", ref _showSize, _activeSizes, new[] { "Small", "Medium", "Large" }, new[] { "SMALL", "MEDIUM", "LARGE" }, db);
 
                 GUILayout.Space(10);
                 Rect sepRect = GUILayoutUtility.GetRect(1f, 2f, GUILayout.ExpandWidth(true));
@@ -99,8 +135,8 @@ namespace BazaarPlugin
                 GUILayout.EndScrollView();
 
                 HandleResize(id, ref WinRect);
-                GUI.DragWindow(new Rect(0, 0, 10000, 25));
-            }, "<b>THE BAZAAR DB</b>", WinStyle);
+                GUI.DragWindow(new Rect(0, 0, 10000, 30));
+            }, "◈ THE BAZAAR DATABASE", WinStyle);
         }
 
         private static void DrawAccordionSection(string title, ref bool isExpanded, HashSet<string> activeSet, string[] values, string[] labels, Dictionary<Guid, CardData> db, int itemsPerRow = 3)
@@ -151,9 +187,8 @@ namespace BazaarPlugin
             string[] t = _query.ToLower().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
             foreach (var c in db.Values)
             {
-
-                // --- EXCLUSION DES MONSTRES ---
-                if (c.Category == "CombatEncounter") continue;
+                // --- RESTRICTION AUX ITEMS ET SKILLS UNIQUEMENT ---
+                if (c.Category != "Item" && c.Category != "Skill") continue;
 
                 if (_activeCats.Count > 0 && !_activeCats.Contains(c.Category)) continue;
                 if (_activeHeroes.Count > 0 && (c.Heroes == null || !c.Heroes.Any(h => _activeHeroes.Contains(h)))) continue;

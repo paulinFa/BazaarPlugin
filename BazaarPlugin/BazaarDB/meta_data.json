@@ -1,0 +1,1504 @@
+[
+  {
+    "Hero": "VANESSA",
+    "Category": "META",
+    "Archetype": "Pistol Sword",
+    "CoreItems": [
+      "Pistol Sword",
+      "Dive Weights",
+      "Nesting Doll"
+    ],
+    "Notes": "Early Pistol Sword from Duelist PvE"
+  },
+  {
+    "Hero": "VANESSA",
+    "Category": "META",
+    "Archetype": "Slumbering Primordial",
+    "CoreItems": [
+      "Slumbering Primordial",
+      "Incendiary Rounds"
+    ],
+    "Notes": "Gold Slumbering is not good enough in the lategame. Need Dia"
+  },
+  {
+    "Hero": "VANESSA",
+    "Category": "META",
+    "Archetype": "Oni Mask",
+    "CoreItems": [
+      "Oni Mask",
+      "Lighter"
+    ],
+    "Notes": "Needs Crit skills (best case Inex early), Pet Rock and Crest are great."
+  },
+  {
+    "Hero": "VANESSA",
+    "Category": "META",
+    "Archetype": "Anchor",
+    "CoreItems": [
+      "Anchor",
+      "Rowboat",
+      "Clamera"
+    ],
+    "Notes": "Very upgrade hungry, wants crit. More of a lategame pivot"
+  },
+  {
+    "Hero": "VANESSA",
+    "Category": "ONE WEAPON",
+    "Archetype": "One Weapon",
+    "CoreItems": [
+      "Silencer",
+      "Langxian"
+    ],
+    "Notes": "Only play Langxian if you get it early and prio getting and winning fights early to scale"
+  },
+  {
+    "Hero": "VANESSA",
+    "Category": "ONE WEAPON",
+    "Archetype": "The Boulder",
+    "CoreItems": [
+      "The Boulder",
+      "Silencer"
+    ],
+    "Notes": "Lategame pivot out of other one weapon builds"
+  },
+  {
+    "Hero": "VANESSA",
+    "Category": "ONE WEAPON",
+    "Archetype": "Blowgun",
+    "CoreItems": [
+      "Blowgun",
+      "Swash Buckle",
+      "Holster"
+    ],
+    "Notes": "Blowgun is the \"secret\" OP item. Poppy field is a highroll with more weapons"
+  },
+  {
+    "Hero": "VANESSA",
+    "Category": "AQUATIC",
+    "Archetype": "Tortuga",
+    "CoreItems": [
+      "Tortuga",
+      "Pufferfish"
+    ],
+    "Notes": "Make sure you have enough haste skills/activations to go off at the start of combat"
+  },
+  {
+    "Hero": "VANESSA",
+    "Category": "AQUATIC",
+    "Archetype": "Depth Charge",
+    "CoreItems": [
+      "Depth Charge",
+      "Yeti Crab"
+    ],
+    "Notes": "Try to get 3+ ammo on depth Charge"
+  },
+  {
+    "Hero": "VANESSA",
+    "Category": "AQUATIC",
+    "Archetype": "Seadog Saloon",
+    "CoreItems": [
+      "Seadog Saloon",
+      "Old Saltclaw",
+      "Mantis Shrimp"
+    ],
+    "Notes": "best case get duplicates of shrimp/saltclaw"
+  },
+  {
+    "Hero": "VANESSA",
+    "Category": "WEAPON",
+    "Archetype": "Arbalest",
+    "CoreItems": [
+      "Arbalest",
+      "Holster",
+      "Dive Weights"
+    ],
+    "Notes": "Get enough Ammo to cut powder flask"
+  },
+  {
+    "Hero": "VANESSA",
+    "Category": "WEAPON",
+    "Archetype": "Ballista",
+    "CoreItems": [
+      "Ballista",
+      "Dive Weights"
+    ],
+    "Notes": ""
+  },
+  {
+    "Hero": "VANESSA",
+    "Category": "WEAPON",
+    "Archetype": "Cannonade",
+    "CoreItems": [
+      "Cannonade",
+      "Throwing Knives"
+    ],
+    "Notes": ""
+  },
+  {
+    "Hero": "VANESSA",
+    "Category": "WEAPON",
+    "Archetype": "Powder Keg",
+    "CoreItems": [
+      "Powder Keg",
+      "Nesting Doll",
+      "Incendiary Rounds"
+    ],
+    "Notes": "Incendary Rounds and heated shells are the best enablers"
+  },
+  {
+    "Hero": "VANESSA",
+    "Category": "WEAPON",
+    "Archetype": "Trebuchet",
+    "CoreItems": [
+      "Trebuchet",
+      "Holster",
+      "Zoarcid"
+    ],
+    "Notes": "Treb cant be your only dmg, other weapons need to do dmg too."
+  },
+  {
+    "Hero": "VANESSA",
+    "Category": "WEAPON",
+    "Archetype": "Torpedo",
+    "CoreItems": [
+      "Torpedo",
+      "Dive Weights"
+    ],
+    "Notes": ""
+  },
+  {
+    "Hero": "VANESSA",
+    "Category": "BURN",
+    "Archetype": "Weatherglass",
+    "CoreItems": [
+      "Weatherglass",
+      "Zoarcid"
+    ],
+    "Notes": "Blazehowl Warden is a great wincon for weatherglass. Needs some kind of scaling as"
+  },
+  {
+    "Hero": "VANESSA",
+    "Category": "BURN",
+    "Archetype": "Slow Burn",
+    "CoreItems": [
+      "Tripwire",
+      "Lighthouse"
+    ],
+    "Notes": "Playing with shot glasses is the most aggressiv version. Tripwire is the best item to hit"
+  },
+  {
+    "Hero": "VANESSA",
+    "Category": "BURN",
+    "Archetype": "Volcanic Vents",
+    "CoreItems": [
+      "Volcanic Vents",
+      "Zoarcid"
+    ],
+    "Notes": "Volcanic Vents needs +Burn skills to be viable"
+  },
+  {
+    "Hero": "VANESSA",
+    "Category": "BURN",
+    "Archetype": "Catfish",
+    "CoreItems": [
+      "Catfish"
+    ],
+    "Notes": "If you play Card Table you want Catfish as your only friend"
+  },
+  {
+    "Hero": "VANESSA",
+    "Category": "BURN",
+    "Archetype": "small Items",
+    "CoreItems": [
+      "Holster",
+      "Throwing Knifes",
+      "Pistol Sword"
+    ],
+    "Notes": "Great if you get Augmented Weaponry early or Diamond Fangs with diamond smalls"
+  },
+  {
+    "Hero": "DOOLEY",
+    "Category": "META",
+    "Archetype": "Ice 9000",
+    "CoreItems": [
+      "Ice 9000",
+      "Pierre Conditioner"
+    ],
+    "Notes": "Cooling Fan + lots of CDR on your core is highest Cap lategame."
+  },
+  {
+    "Hero": "DOOLEY",
+    "Category": "META",
+    "Archetype": "Dooltron",
+    "CoreItems": [
+      "Dooltron"
+    ],
+    "Notes": "With Dooltron being a vehicle getting Saddel + Thruster on a fast item is a good setup"
+  },
+  {
+    "Hero": "DOOLEY",
+    "Category": "META",
+    "Archetype": "Power Drill",
+    "CoreItems": [
+      "Power Drill",
+      "Pylon"
+    ],
+    "Notes": "plenty of possible setups with differnet enchants and skills. Negative Mountain Pass"
+  },
+  {
+    "Hero": "DOOLEY",
+    "Category": "META",
+    "Archetype": "Harmadillo",
+    "CoreItems": [
+      "Harmadillo",
+      "Duct Tape"
+    ],
+    "Notes": "Shielded Enchants esp on the Bunker version are super importent"
+  },
+  {
+    "Hero": "DOOLEY",
+    "Category": "WEAPON",
+    "Archetype": "Crit Core Carry",
+    "CoreItems": [
+      "Critical Core",
+      "Mech- Moles",
+      "Metronom"
+    ],
+    "Notes": "Getting crit on your other items makes the Critical Core a lot faster"
+  },
+  {
+    "Hero": "DOOLEY",
+    "Category": "WEAPON",
+    "Archetype": "Kinetic Cannon",
+    "CoreItems": [
+      "Kinetic Cannon",
+      "The Core",
+      "Battery"
+    ],
+    "Notes": "Kinetic to Gold on level 7, But really wants The Core to dia in the lategame"
+  },
+  {
+    "Hero": "DOOLEY",
+    "Category": "WEAPON",
+    "Archetype": "Nitrogen Hammer",
+    "CoreItems": [
+      "Nitrogen Hammer",
+      "Coolant"
+    ],
+    "Notes": "Toxic enchant somewhere (core, uzi, hammer, fiber) is great for blue bug"
+  },
+  {
+    "Hero": "DOOLEY",
+    "Category": "WEAPON",
+    "Archetype": "Railgun",
+    "CoreItems": [
+      "Railgun",
+      "Arc Blaster",
+      "Critical Core"
+    ],
+    "Notes": "Best Core is Critical Core, can play The Core but most likely a pivot later if you play it"
+  },
+  {
+    "Hero": "DOOLEY",
+    "Category": "WEAPON",
+    "Archetype": "Cybersecurity",
+    "CoreItems": [
+      "Cybersecurity",
+      "The Core"
+    ],
+    "Notes": "Schematics great to find your tech items"
+  },
+  {
+    "Hero": "DOOLEY",
+    "Category": "WEAPON",
+    "Archetype": "Trollosaur",
+    "CoreItems": [
+      "Trollosaur",
+      "Diana-Saur"
+    ],
+    "Notes": "Very matchup dependent as you need your enemy to play smalls and passiv items to"
+  },
+  {
+    "Hero": "DOOLEY",
+    "Category": "WEAPON",
+    "Archetype": "Hydraulic Press",
+    "CoreItems": [
+      "Hydraulic Press",
+      "Red Button"
+    ],
+    "Notes": "Need to make Press a Core at some point to use Remote Control or Mainframe"
+  },
+  {
+    "Hero": "DOOLEY",
+    "Category": "BURN",
+    "Archetype": "Ignition Core",
+    "CoreItems": [
+      "Ignition Core",
+      "RED-F1R3FLY"
+    ],
+    "Notes": "Dino-Saddle Core Carry also playable"
+  },
+  {
+    "Hero": "DOOLEY",
+    "Category": "BURN",
+    "Archetype": "Thermal Lance",
+    "CoreItems": [
+      "Thermal Lance",
+      "Metronom"
+    ],
+    "Notes": "doesnt need any kind of burn scaling as thermal is all you need"
+  },
+  {
+    "Hero": "DOOLEY",
+    "Category": "SHIELD",
+    "Archetype": "Angry Balloon Bot",
+    "CoreItems": [
+      "Angry Balloon Bot",
+      "Duct Tape",
+      "Amored Core"
+    ],
+    "Notes": "Shielded Angry Bot great for the Bunker Version. Very matchup dependend"
+  },
+  {
+    "Hero": "DOOLEY",
+    "Category": "SHIELD",
+    "Archetype": "Force Field",
+    "CoreItems": [
+      "Force Field",
+      "Bunker",
+      "SMG"
+    ],
+    "Notes": "Crit on FF very importent!"
+  },
+  {
+    "Hero": "DOOLEY",
+    "Category": "FRIENDS",
+    "Archetype": "Bellalista",
+    "CoreItems": [
+      "Bellalista",
+      "Companion Core"
+    ],
+    "Notes": ""
+  },
+  {
+    "Hero": "DOOLEY",
+    "Category": "FRIENDS",
+    "Archetype": "Monitor Lizard",
+    "CoreItems": [
+      "Monitor Lizard",
+      "BLU-B33TL3"
+    ],
+    "Notes": "Diamond Lizard at 2sec is a great item, can also a pivot into Dooltron"
+  },
+  {
+    "Hero": "DOOLEY",
+    "Category": "LAUNCHER",
+    "Archetype": "Terry-Dactyl",
+    "CoreItems": [
+      "Terry-Dactyl"
+    ],
+    "Notes": ""
+  },
+  {
+    "Hero": "DOOLEY",
+    "Category": "LAUNCHER",
+    "Archetype": "Crane",
+    "CoreItems": [
+      "Crane",
+      "SMG"
+    ],
+    "Notes": "Micro Mach great with Saddle (not in Mobalytics)"
+  },
+  {
+    "Hero": "DOOLEY",
+    "Category": "LAUNCHER",
+    "Archetype": "Combat Core",
+    "CoreItems": [
+      "Miss Isles",
+      "Combat Core"
+    ],
+    "Notes": "Micro Mach great with Saddle (not in Mobalytics)"
+  },
+  {
+    "Hero": "DOOLEY",
+    "Category": "LAUNCHER",
+    "Archetype": "Nitrogen Hammer",
+    "CoreItems": [
+      "Nitrogen Hammer",
+      "Cooling Fan",
+      "Launcher Core"
+    ],
+    "Notes": "Launcher Core setup, can be played with other but not as good imo"
+  },
+  {
+    "Hero": "DOOLEY",
+    "Category": "LAUNCHER",
+    "Archetype": "Launch Pad",
+    "CoreItems": [
+      "Launch Pad",
+      "Launcher Core"
+    ],
+    "Notes": "Needs +Burn on Launch Pad or some scaling, Toxic Flame and Blazehowl best"
+  },
+  {
+    "Hero": "PYG",
+    "Category": "META",
+    "Archetype": "Yetarian Club",
+    "CoreItems": [
+      "Yetarian Club",
+      "Cold Room"
+    ],
+    "Notes": "Igloo also an Option, as is any other kind of freeze item like Cryosleeve"
+  },
+  {
+    "Hero": "PYG",
+    "Category": "META",
+    "Archetype": "Landscraper",
+    "CoreItems": [
+      "Landscraper",
+      "Spiky Shield"
+    ],
+    "Notes": "If you have an offensive enchant on Protectors/Spacescraper/Billboard you dont"
+  },
+  {
+    "Hero": "PYG",
+    "Category": "META",
+    "Archetype": "Cargo Shorts",
+    "CoreItems": [
+      "Cargo Shorts",
+      "Wristwarrior"
+    ],
+    "Notes": "Need scaling skills if you dont play scaling items"
+  },
+  {
+    "Hero": "PYG",
+    "Category": "META",
+    "Archetype": "Skyscraper",
+    "CoreItems": [
+      "Scyscraper",
+      "Abacus",
+      "Open Sign",
+      "Pitchfork!"
+    ],
+    "Notes": "Value stack the Abacus"
+  },
+  {
+    "Hero": "PYG",
+    "Category": "META",
+    "Archetype": "Crook",
+    "CoreItems": [
+      "Crook",
+      "Atlatl"
+    ],
+    "Notes": "Lots of options for items: Also great off class items."
+  },
+  {
+    "Hero": "PYG",
+    "Category": "WEAPON",
+    "Archetype": "Coincure",
+    "CoreItems": [
+      "Coincure",
+      "Kukri",
+      "Yo-yo"
+    ],
+    "Notes": "Weights is your early game setup, Heal Enchanted Weapons!"
+  },
+  {
+    "Hero": "PYG",
+    "Category": "WEAPON",
+    "Archetype": "Jabalian Drum",
+    "CoreItems": [
+      "Jabalian Drum",
+      "Yo-yo"
+    ],
+    "Notes": "Benefits greatly from off class Weapons or Duplicates on things like Yo-yo"
+  },
+  {
+    "Hero": "PYG",
+    "Category": "WEAPON",
+    "Archetype": "28 Hour Fitness",
+    "CoreItems": [
+      "28 Hour Fitness",
+      "Yo-yo",
+      "Badblocker"
+    ],
+    "Notes": "Getting the Badblocker to cast fast is importent. Off class charge + haste can help"
+  },
+  {
+    "Hero": "PYG",
+    "Category": "WEAPON",
+    "Archetype": "Toys",
+    "CoreItems": [
+      "Yo-yo",
+      "Model Ship"
+    ],
+    "Notes": "Speedrunner another great option to charge Abacus"
+  },
+  {
+    "Hero": "PYG",
+    "Category": "WEAPON",
+    "Archetype": "Beast of Burden",
+    "CoreItems": [
+      "Beast of Burden",
+      "Piggles Board"
+    ],
+    "Notes": "Cargo Shorts in stash gives you all the tags you could ever want since it saves tags"
+  },
+  {
+    "Hero": "PYG",
+    "Category": "PROPERTIES",
+    "Archetype": "Pyg's Gym",
+    "CoreItems": [
+      "Pyg's Gym",
+      "Balcony",
+      "Atlatl"
+    ],
+    "Notes": "Dont play until scaled!"
+  },
+  {
+    "Hero": "PYG",
+    "Category": "PROPERTIES",
+    "Archetype": "Lemonade Stand",
+    "CoreItems": [
+      "Lemonade Stand",
+      "Keychain"
+    ],
+    "Notes": "Enchants are the reason these kind of builds work! Get offensive enchant on Stand"
+  },
+  {
+    "Hero": "PYG",
+    "Category": "PROPERTIES",
+    "Archetype": "Fat Pyg",
+    "CoreItems": [
+      "Pawnshop",
+      "Belt",
+      "Lion Cane"
+    ],
+    "Notes": "Dont play Pawnshop too early, only when scaled and you have a Weapon."
+  },
+  {
+    "Hero": "PYG",
+    "Category": "PROPERTIES",
+    "Archetype": "Money Tree",
+    "CoreItems": [
+      "Money Tree",
+      "Laser Security System"
+    ],
+    "Notes": "Offensive enchant Tree can solo carry."
+  },
+  {
+    "Hero": "PYG",
+    "Category": "PROPERTIES",
+    "Archetype": "Vineyard",
+    "CoreItems": [
+      "Vineyard"
+    ],
+    "Notes": "Really wants an offclass regen payoff like Bread Knife or Sunlight Spear"
+  },
+  {
+    "Hero": "PYG",
+    "Category": "BURN",
+    "Archetype": "Riceballer",
+    "CoreItems": [
+      "Riceballer",
+      "PenFT",
+      "Textiles"
+    ],
+    "Notes": "Cargo Pants need Property for Keychain to work"
+  },
+  {
+    "Hero": "PYG",
+    "Category": "BURN",
+    "Archetype": "Tea Set",
+    "CoreItems": [
+      "Tea Set",
+      "Hot Stones",
+      "Textiles"
+    ],
+    "Notes": "Hogwash playable aswell"
+  },
+  {
+    "Hero": "PYG",
+    "Category": "BURN",
+    "Archetype": "Matchbox",
+    "CoreItems": [
+      "Matchbox",
+      "Orange Piggle"
+    ],
+    "Notes": "Best if start enchanted Matchbox. often more of a tempo setup that wants to pivot"
+  },
+  {
+    "Hero": "PYG",
+    "Category": "BURN",
+    "Archetype": "Luxury Kiuas",
+    "CoreItems": [
+      "Luxury Kiuas",
+      "Fort"
+    ],
+    "Notes": "Ledger, Rewards Card for scaling, PenFT can help during early fights"
+  },
+  {
+    "Hero": "PYG",
+    "Category": "FREEZE",
+    "Archetype": "Igloo",
+    "CoreItems": [
+      "Steam Ladle",
+      "Cold Room",
+      "Igloo"
+    ],
+    "Notes": "Fort can also be an option, very close to the hot Spring builds. Enchanted Cold Room"
+  },
+  {
+    "Hero": "PYG",
+    "Category": "FREEZE",
+    "Archetype": "Snowmobile",
+    "CoreItems": [
+      "Snowmobile",
+      "Ice Cream Truck"
+    ],
+    "Notes": "Toy tag onto Ice Cream Truck for multi if you can"
+  },
+  {
+    "Hero": "PYG",
+    "Category": "FREEZE",
+    "Archetype": "Hot Springs",
+    "CoreItems": [
+      "Private Hot Springs",
+      "Cold Room"
+    ],
+    "Notes": "2 Ammo or Dia Ice luge gives 1 cycle Hot Springs(4s)"
+  },
+  {
+    "Hero": "MAK",
+    "Category": "META",
+    "Archetype": "Goop Flail",
+    "CoreItems": [
+      "Poppy Fields",
+      "Goop Flail"
+    ],
+    "Notes": "Get some Base Dmg on Flail + Crit and you should oneshot everyone late."
+  },
+  {
+    "Hero": "MAK",
+    "Category": "META",
+    "Archetype": "Bottled Explosion",
+    "CoreItems": [
+      "Potion Distillery",
+      "Bottled Explosion"
+    ],
+    "Notes": "Try to charge skills for Weapon, good basedmg from skills/loot helps a lot"
+  },
+  {
+    "Hero": "MAK",
+    "Category": "META",
+    "Archetype": "Idol of Decay",
+    "CoreItems": [
+      "Idol of Decay",
+      "Excavation Tools"
+    ],
+    "Notes": "Try to loop the Idol with Lib/Lab/Sampler/Pendulum/Scales. Doesnt need many posion"
+  },
+  {
+    "Hero": "MAK",
+    "Category": "META",
+    "Archetype": "Oil Lantern",
+    "CoreItems": [
+      "Oil Lantern",
+      "Rapid Injection System",
+      "Optical Aug"
+    ],
+    "Notes": "Wants to loop the Oil Latern asap. Some kind of burn scaling great."
+  },
+  {
+    "Hero": "MAK",
+    "Category": "POTION",
+    "Archetype": "Athanor",
+    "CoreItems": [
+      "Athanor",
+      "Boiling Flask"
+    ],
+    "Notes": "More early/midgame build prob need to pivot lategame"
+  },
+  {
+    "Hero": "MAK",
+    "Category": "POTION",
+    "Archetype": "Potion Distillery",
+    "CoreItems": [
+      "Potion Distillery",
+      "Boiling Flask"
+    ],
+    "Notes": "Shiny Shrinking Potions + Poison or Obsidian Vitality Potion for DMG"
+  },
+  {
+    "Hero": "MAK",
+    "Category": "POTION",
+    "Archetype": "Recycling Bin",
+    "CoreItems": [
+      "Vial Launcher",
+      "Recycling Bin",
+      "Runic Potion"
+    ],
+    "Notes": "Cant play a Weapon Potion so Runic Potion guarantees to hit Vial Launcher"
+  },
+  {
+    "Hero": "MAK",
+    "Category": "WEAPON",
+    "Archetype": "Femur",
+    "CoreItems": [
+      "Magnus Femur",
+      "Sands of Time",
+      "Runic Potion"
+    ],
+    "Notes": "Good Pivot if you have Sands/Slate already stacked. Lifesteal from any skill is great"
+  },
+  {
+    "Hero": "MAK",
+    "Category": "WEAPON",
+    "Archetype": "Magic Carpet",
+    "CoreItems": [
+      "Flying Potion",
+      "Orly",
+      "Boiling Flask",
+      "Magic Carpet"
+    ],
+    "Notes": "get enchants on potions (enchant that can crit on flying), Taz Dagger on flying early"
+  },
+  {
+    "Hero": "MAK",
+    "Category": "WEAPON",
+    "Archetype": "Refractor",
+    "CoreItems": [
+      "Refractor"
+    ],
+    "Notes": "Mostly a tempo build, if you dont streak to 10 you usually want to pivot towards femur,"
+  },
+  {
+    "Hero": "MAK",
+    "Category": "WEAPON",
+    "Archetype": "Runic Great Axe",
+    "CoreItems": [
+      "Runic Great Axe",
+      "Runic Daggers"
+    ],
+    "Notes": "Runic Blade is the finisher if you dont find scaling. Double Dagger are sick"
+  },
+  {
+    "Hero": "MAK",
+    "Category": "POISON/REGEN",
+    "Archetype": "Plague Glaive",
+    "CoreItems": [
+      "Plague Glaive",
+      "Spider Mace"
+    ],
+    "Notes": "Toxic Poison items to double dip on the +poison are great esp in Potions"
+  },
+  {
+    "Hero": "MAK",
+    "Category": "POISON/REGEN",
+    "Archetype": "Test Subject Alpha",
+    "CoreItems": [
+      "Test Subject Alpha",
+      "Spider Mace",
+      "Barbed Claws"
+    ],
+    "Notes": "Healing enchant (adrenal/injection/poppy) to not die to self poison is very nice"
+  },
+  {
+    "Hero": "MAK",
+    "Category": "POISON/REGEN",
+    "Archetype": "Staff of the Moose",
+    "CoreItems": [
+      "Staff of the Moose",
+      "Adrenal Converter",
+      "Spider Mace"
+    ],
+    "Notes": "Dupe Spider Mace, Enchants on self poison items are great"
+  },
+  {
+    "Hero": "MAK",
+    "Category": "POISON/REGEN",
+    "Archetype": "Tomb of the Ancients",
+    "CoreItems": [
+      "Blank Slate",
+      "Tomb of the Ancients",
+      "Excavation Tools"
+    ],
+    "Notes": "Excavation Tools is the most importent upgrade. Don't waste sterling on tomb"
+  },
+  {
+    "Hero": "MAK",
+    "Category": "POISON/REGEN",
+    "Archetype": "Apothecary",
+    "CoreItems": [
+      "Apothecary",
+      "Adrenal Converter",
+      "Injection System"
+    ],
+    "Notes": "Infinite Apothecary to scale Regen, needs utility enchant somewhere for infinte"
+  },
+  {
+    "Hero": "MAK",
+    "Category": "POISON/REGEN",
+    "Archetype": "Life Conduit",
+    "CoreItems": [
+      "Life Conduit",
+      "Excavation Tools"
+    ],
+    "Notes": "Scaling Enchant can make this playable without a \"finisher\" similar to Torch or Idol"
+  },
+  {
+    "Hero": "MAK",
+    "Category": "POISON/REGEN",
+    "Archetype": "Peacewrought Spear",
+    "CoreItems": [
+      "Sunlight Spear",
+      "Peacewrought"
+    ],
+    "Notes": "Calc/Retort chunks of gold are great value stacking for peacwrought and can also"
+  },
+  {
+    "Hero": "MAK",
+    "Category": "BURN",
+    "Archetype": "Calcinator",
+    "CoreItems": [
+      "Calcinator",
+      "Fire Claw"
+    ],
+    "Notes": "Can play Retort + Calc"
+  },
+  {
+    "Hero": "MAK",
+    "Category": "BURN",
+    "Archetype": "Eternal Torch",
+    "CoreItems": [
+      "Eternal Torch"
+    ],
+    "Notes": "Candels is the best early game. Scaling Enchants on Torch needed"
+  },
+  {
+    "Hero": "MAK",
+    "Category": "BURN",
+    "Archetype": "Skyterror",
+    "CoreItems": [
+      "Skyterror",
+      "Orly"
+    ],
+    "Notes": "Try to get shiny smalls with shiny reagent."
+  },
+  {
+    "Hero": "MAK",
+    "Category": "BURN",
+    "Archetype": "Short",
+    "CoreItems": [],
+    "Notes": "Getting Sampler and cutting destillary or gravestone lategame is a great option to"
+  },
+  {
+    "Hero": "MAK",
+    "Category": "BURN",
+    "Archetype": "Vat of Acid",
+    "CoreItems": [
+      "Vat of Acid",
+      "Boiling Flask"
+    ],
+    "Notes": "If you want to play Library you cant have weapon on Vat of Acid"
+  },
+  {
+    "Hero": "MAK",
+    "Category": "BURN",
+    "Archetype": "Retort",
+    "CoreItems": [
+      "Retort",
+      "Library"
+    ],
+    "Notes": "Lots of ways to go infinite with pendulum/scales/library/lab"
+  },
+  {
+    "Hero": "STELLE",
+    "Category": "META",
+    "Archetype": "Lavaroller",
+    "CoreItems": [
+      "Lavaroller",
+      "Repair Drone"
+    ],
+    "Notes": "Fiery Lavaroller absolut BIS."
+  },
+  {
+    "Hero": "STELLE",
+    "Category": "META",
+    "Archetype": "Big One",
+    "CoreItems": [
+      "Big One",
+      "Parts Picker",
+      "Repair Drone"
+    ],
+    "Notes": "Goal is to destroy and repair Big One as fast as posssible"
+  },
+  {
+    "Hero": "STELLE",
+    "Category": "META",
+    "Archetype": "Vortex Cannon",
+    "CoreItems": [
+      "Vortex Cannon",
+      "Altimeter"
+    ],
+    "Notes": "Can play vortex, skyliner in midgame, upgrade hungry but loops greatly"
+  },
+  {
+    "Hero": "STELLE",
+    "Category": "META",
+    "Archetype": "Pillbuggy",
+    "CoreItems": [
+      "Pillbuggy",
+      "Hydrogen Tank",
+      "Radar Dome"
+    ],
+    "Notes": "Doesnt need many haste triggers if you have crit and multi"
+  },
+  {
+    "Hero": "STELLE",
+    "Category": "META",
+    "Archetype": "Boosted Saucer",
+    "CoreItems": [
+      "Boosted Saucer",
+      "Repair Drone"
+    ],
+    "Notes": "Wants the fast Bombs to Charge the Saucer. Powerhouse from Silver starting"
+  },
+  {
+    "Hero": "STELLE",
+    "Category": "START/STOP FLYING",
+    "Archetype": "Hang Glider",
+    "CoreItems": [
+      "Hang Glider",
+      "Marshalling Lights",
+      "Paper Airplane"
+    ],
+    "Notes": "Mag shield if you dont have a defensive Enchant on Glider can be good, but need to"
+  },
+  {
+    "Hero": "STELLE",
+    "Category": "START/STOP FLYING",
+    "Archetype": "Daggerwing",
+    "CoreItems": [
+      "Daggerwing",
+      "Freefall Simulator"
+    ],
+    "Notes": "Can also fly dome instead of Dagge to not have up/down issues"
+  },
+  {
+    "Hero": "STELLE",
+    "Category": "START/STOP FLYING",
+    "Archetype": "Balloon Engine",
+    "CoreItems": [
+      "Balloon Engine",
+      "Freefall Simulator"
+    ],
+    "Notes": "Flamejet Drone, Boom Boom Drone are amazing items for it."
+  },
+  {
+    "Hero": "STELLE",
+    "Category": "START/STOP FLYING",
+    "Archetype": "Wrecking Ball",
+    "CoreItems": [
+      "Wrecking Ball",
+      "Freefall Simulator",
+      "Ornithopter"
+    ],
+    "Notes": "Orni needs lower CD than Freefall if you play it on the Ball. Otherwise on Freefall"
+  },
+  {
+    "Hero": "STELLE",
+    "Category": "FLYING",
+    "Archetype": "Battledrone",
+    "CoreItems": [
+      "Battledrone",
+      "Targeting Drone",
+      "Joystick"
+    ],
+    "Notes": "Hanger is your lategame to scale CD. Needs some kind of scaling from skills like"
+  },
+  {
+    "Hero": "STELLE",
+    "Category": "FLYING",
+    "Archetype": "Space Laser",
+    "CoreItems": [
+      "Space Laser",
+      "Ornithopter"
+    ],
+    "Notes": "If you find Thruster or sud for vehicle you can play Launch Tower"
+  },
+  {
+    "Hero": "STELLE",
+    "Category": "FLYING",
+    "Archetype": "Skyliner",
+    "CoreItems": [
+      "Skyliner",
+      "Hang Glider"
+    ],
+    "Notes": "More of a Tempo 10 win, Day 13+ prob needs to pivot"
+  },
+  {
+    "Hero": "STELLE",
+    "Category": "FLYING",
+    "Archetype": "Swallowtail",
+    "CoreItems": [
+      "Swallowtail",
+      "Radar Dome"
+    ],
+    "Notes": ""
+  },
+  {
+    "Hero": "STELLE",
+    "Category": "FLYING",
+    "Archetype": "Privat Runabout",
+    "CoreItems": [
+      "Privat Runabout",
+      "Headset"
+    ],
+    "Notes": "Not the greatest lategame build. Spotlight can scale you late if needed."
+  },
+  {
+    "Hero": "STELLE",
+    "Category": "TOOLS",
+    "Archetype": "Steam Hose",
+    "CoreItems": [
+      "Steam Hose",
+      "Weathernachine"
+    ],
+    "Notes": "Defensive Enchant on Steam Hose to buy time to scale. Radiant on Hangar good too"
+  },
+  {
+    "Hero": "STELLE",
+    "Category": "TOOLS",
+    "Archetype": "Pressure Heater",
+    "CoreItems": [
+      "Pressure Heater",
+      "Flame Jet Drone",
+      "Parts Picker"
+    ],
+    "Notes": "Fiery Workshop is the best payoff for the pressure heater, flame jet second best"
+  },
+  {
+    "Hero": "STELLE",
+    "Category": "TOOLS",
+    "Archetype": "Workshop Drone",
+    "CoreItems": [
+      "Angle Grinder Drone",
+      "Spotlight",
+      "Workshop"
+    ],
+    "Notes": "Wants some kind of base Damage on the weapon and best case shield or heal"
+  },
+  {
+    "Hero": "STELLE",
+    "Category": "TOOLS",
+    "Archetype": "Steam Washer",
+    "CoreItems": [
+      "Steam Washer"
+    ],
+    "Notes": "Swallowtail version really wants to get early fly from skills, and/or dia Flycycle."
+  },
+  {
+    "Hero": "STELLE",
+    "Category": "TOOLS",
+    "Archetype": "Skyanchor",
+    "CoreItems": [
+      "Sky Anchor",
+      "Weathermachine"
+    ],
+    "Notes": "Best case scaling form skills aswell, upgrade on Workshop!"
+  },
+  {
+    "Hero": "STELLE",
+    "Category": "OTHER",
+    "Archetype": "Lightning Rod",
+    "CoreItems": [
+      "Lightning Rod",
+      "Weather Machine"
+    ],
+    "Notes": "Weapon scaling needed! skills like trained are great for this build"
+  },
+  {
+    "Hero": "STELLE",
+    "Category": "OTHER",
+    "Archetype": "Oblivion Cannon",
+    "CoreItems": [
+      "Oblivion Cannon"
+    ],
+    "Notes": "The Workshop variants needs lots of upgrades to dia to work!"
+  },
+  {
+    "Hero": "JULES",
+    "Category": "META",
+    "Archetype": "Fruit Press",
+    "CoreItems": [
+      "Fruit Press",
+      "Coffee",
+      "Dishwasher"
+    ],
+    "Notes": "Heated: Fruit Press"
+  },
+  {
+    "Hero": "JULES",
+    "Category": "META",
+    "Archetype": "Freezer",
+    "CoreItems": [
+      "Freezer",
+      "Pastry Cart"
+    ],
+    "Notes": "Chilled: Freezer, Blender"
+  },
+  {
+    "Hero": "JULES",
+    "Category": "META",
+    "Archetype": "Giant Lollipop",
+    "CoreItems": [
+      "Giant Lollipop",
+      "Dishwasher"
+    ],
+    "Notes": "Heated: Giant Lollipop"
+  },
+  {
+    "Hero": "JULES",
+    "Category": "BURN",
+    "Archetype": "Grill",
+    "CoreItems": [
+      "Grill",
+      "Rice Cooker"
+    ],
+    "Notes": "Heated: 3 fast foods"
+  },
+  {
+    "Hero": "JULES",
+    "Category": "BURN",
+    "Archetype": "Feast",
+    "CoreItems": [
+      "Feast",
+      "Basket",
+      "Serving Platter"
+    ],
+    "Notes": "Heated + Chilled: Feast"
+  },
+  {
+    "Hero": "JULES",
+    "Category": "BURN",
+    "Archetype": "Jumbo Wok",
+    "CoreItems": [
+      "Jumbo Wok"
+    ],
+    "Notes": "Heated: wants 3 heated! Jumbo Wok, Stew"
+  },
+  {
+    "Hero": "JULES",
+    "Category": "BURN",
+    "Archetype": "Imu",
+    "CoreItems": [
+      "Imu",
+      "Honeycomb"
+    ],
+    "Notes": "Heated: Imu, Honeycomb, Bubblegum"
+  },
+  {
+    "Hero": "JULES",
+    "Category": "BURN",
+    "Archetype": "Jambalaya",
+    "CoreItems": [
+      "Pizza",
+      "Jambalaya",
+      "Corksrew"
+    ],
+    "Notes": "Heated: Pizza"
+  },
+  {
+    "Hero": "JULES",
+    "Category": "BURN",
+    "Archetype": "One Food Carry",
+    "CoreItems": [
+      "Laurels Favorite",
+      "Pizza Cutter",
+      "Cookbook"
+    ],
+    "Notes": "Heated: Laurels Favorite, (Pizza Cutter, Dragon Steak)"
+  },
+  {
+    "Hero": "JULES",
+    "Category": "SHIELD",
+    "Archetype": "Durian",
+    "CoreItems": [
+      "Durian",
+      "Apron/Dragonmelon"
+    ],
+    "Notes": "Chilled: Durian, Dragonmelon  Heated: Durian"
+  },
+  {
+    "Hero": "JULES",
+    "Category": "SHIELD",
+    "Archetype": "Cheese Wheel",
+    "CoreItems": [
+      "Cheese Wheel",
+      "Meat Tenderizer"
+    ],
+    "Notes": "Heated: Microwave"
+  },
+  {
+    "Hero": "JULES",
+    "Category": "SHIELD",
+    "Archetype": "Gingerbread House",
+    "CoreItems": [
+      "Gingerbread House",
+      "Saffron"
+    ],
+    "Notes": "Heated: Gingerbread House, Microwave"
+  },
+  {
+    "Hero": "JULES",
+    "Category": "FREEZE",
+    "Archetype": "Cooler",
+    "CoreItems": [
+      "Cooler",
+      "Blender"
+    ],
+    "Notes": "Chilled: Blender"
+  },
+  {
+    "Hero": "JULES",
+    "Category": "REGEN",
+    "Archetype": "Laurels Fort",
+    "CoreItems": [
+      "Farmers Market",
+      "Laurel's Fortress"
+    ],
+    "Notes": "Core is Market + Fortress and if no offensive enchant like burn you want bread Knife"
+  },
+  {
+    "Hero": "JULES",
+    "Category": "REGEN",
+    "Archetype": "Farmers Market",
+    "CoreItems": [
+      "Farmers Market",
+      "Garden",
+      "Bread Knife"
+    ],
+    "Notes": "Can be full Pacifist, as the health and regen gain is crazy"
+  },
+  {
+    "Hero": "JULES",
+    "Category": "REGEN",
+    "Archetype": "Short",
+    "CoreItems": [],
+    "Notes": "Heavy Market + Luau is infinite Regen with Bread Knife as Payoff, Luau comps wants"
+  },
+  {
+    "Hero": "JULES",
+    "Category": "REGEN",
+    "Archetype": "Beach Umbrella",
+    "CoreItems": [
+      "Beach Umbrella",
+      "Breadknife"
+    ],
+    "Notes": "Chilled: Blender, Beach Umbrella (Dragonmelon)"
+  },
+  {
+    "Hero": "JULES",
+    "Category": "WEAPON",
+    "Archetype": "Dishwasher",
+    "CoreItems": [
+      "Dishwasher"
+    ],
+    "Notes": "Good early game tempo setup that needs to find the Washer"
+  },
+  {
+    "Hero": "JULES",
+    "Category": "WEAPON",
+    "Archetype": "Massive Cleaver",
+    "CoreItems": [
+      "Massive Cleaver",
+      "Skewer"
+    ],
+    "Notes": "Heated: Massive Cleaver, Skewer"
+  },
+  {
+    "Hero": "JULES",
+    "Category": "WEAPON",
+    "Archetype": "Short",
+    "CoreItems": [],
+    "Notes": "If you dont play the 100% food items you NEED base crit skills, or enchants"
+  },
+  {
+    "Hero": "JULES",
+    "Category": "WEAPON",
+    "Archetype": "Rolling Pin",
+    "CoreItems": [
+      "Rolling Pin",
+      "Dishwasher",
+      "Coffee"
+    ],
+    "Notes": "Heated: Rolling Pin"
+  },
+  {
+    "Hero": "KARNOK",
+    "Category": "META",
+    "Archetype": "Treeclub",
+    "CoreItems": [
+      "Treeclub",
+      "Flying Squirrel"
+    ],
+    "Notes": "increased Rage duration"
+  },
+  {
+    "Hero": "KARNOK",
+    "Category": "META",
+    "Archetype": "Machete",
+    "CoreItems": [
+      "Machete",
+      "Flame Sigil",
+      "Boar Mask"
+    ],
+    "Notes": "Wants to enrage on first hit and deal DMG with Flame Sigil + Boar Mask."
+  },
+  {
+    "Hero": "KARNOK",
+    "Category": "BURN",
+    "Archetype": "Burn Scar",
+    "CoreItems": [
+      "Burn Scar",
+      "Hunters Sled",
+      "Flying Squirrel"
+    ],
+    "Notes": "decreased Rage duration"
+  },
+  {
+    "Hero": "KARNOK",
+    "Category": "AURORA VISTA",
+    "Archetype": "Boar Karst",
+    "CoreItems": [
+      "Karst",
+      "Wild Boar",
+      "Stretch Pants"
+    ],
+    "Notes": "decreased Rage duration"
+  },
+  {
+    "Hero": "KARNOK",
+    "Category": "AURORA VISTA",
+    "Archetype": "Hollow Freeze",
+    "CoreItems": [
+      "Frog Hollow",
+      "Karst",
+      "Snow Wisp"
+    ],
+    "Notes": "decreased Rage duration"
+  },
+  {
+    "Hero": "KARNOK",
+    "Category": "WEAPON",
+    "Archetype": "Giant Sling",
+    "CoreItems": [
+      "Giant Sling"
+    ],
+    "Notes": "increased Rage duration"
+  },
+  {
+    "Hero": "KARNOK",
+    "Category": "WEAPON",
+    "Archetype": "Shotgun",
+    "CoreItems": [
+      "Shotgun",
+      "Tent",
+      "Fairy Circle"
+    ],
+    "Notes": ""
+  },
+  {
+    "Hero": "KARNOK",
+    "Category": "WEAPON",
+    "Archetype": "Spear Hawk",
+    "CoreItems": [
+      "Spear",
+      "Hawk",
+      "Flying Squirrel"
+    ],
+    "Notes": "Midgame + Tempo setup, you usually NEED to pivot out of this for late."
+  },
+  {
+    "Hero": "KARNOK",
+    "Category": "WEAPON",
+    "Archetype": "Outlands Terror",
+    "CoreItems": [
+      "Outland Terror",
+      "Flying Squirrel",
+      "Messenger Sparrow"
+    ],
+    "Notes": "increased Rage duration"
+  },
+  {
+    "Hero": "KARNOK",
+    "Category": "WEAPON",
+    "Archetype": "Anacoda",
+    "CoreItems": [
+      "Anaconda",
+      "Karst"
+    ],
+    "Notes": "-1 Rage Duration"
+  },
+  {
+    "Hero": "KARNOK",
+    "Category": "MAX HP",
+    "Archetype": "Claymore",
+    "CoreItems": [
+      "Runic Claymore",
+      "Flying Squirrel"
+    ],
+    "Notes": "Doenst need a whole lot of Max HP, crit is more importent"
+  },
+  {
+    "Hero": "KARNOK",
+    "Category": "MAX HP",
+    "Archetype": "Lost Blade",
+    "CoreItems": [
+      "Lost Blade",
+      "Trail Markers"
+    ],
+    "Notes": "Has to be your only active item."
+  },
+  {
+    "Hero": "KARNOK",
+    "Category": "MAX HP",
+    "Archetype": "Wild Bear",
+    "CoreItems": [
+      "Wild Bear"
+    ],
+    "Notes": ""
+  },
+  {
+    "Hero": "KARNOK",
+    "Category": "SLOW",
+    "Archetype": "Boa",
+    "CoreItems": [
+      "Boa Constrictor",
+      "Chains"
+    ],
+    "Notes": "Worry Wart is a good midgame option but often falls off later"
+  },
+  {
+    "Hero": "KARNOK",
+    "Category": "SLOW",
+    "Archetype": "Beartrap",
+    "CoreItems": [
+      "Bear Trap",
+      "Tent",
+      "Chains"
+    ],
+    "Notes": "Really wants to get to ~3 ammo. With only 1 ammo you kind have to play Wart"
+  },
+  {
+    "Hero": "KARNOK",
+    "Category": "SLOW",
+    "Archetype": "Hunters Blind",
+    "CoreItems": [
+      "Hunters Blind",
+      "Wild Boar"
+    ],
+    "Notes": ""
+  }
+]

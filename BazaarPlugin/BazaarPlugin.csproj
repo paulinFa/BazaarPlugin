@@ -106,6 +106,7 @@
     <Compile Include="CardDetailsUI.cs" />
     <Compile Include="MonsterUI.cs" />
     <Compile Include="Plugin.cs" />
+    <Compile Include="MetaUI.cs" />
     <Compile Include="DatabaseUI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

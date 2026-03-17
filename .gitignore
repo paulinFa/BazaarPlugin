@@ -17,3 +17,5 @@ packages/
 # User-specific
 .DS_Store
 *.swp
+
+config.json
