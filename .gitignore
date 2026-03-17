@@ -19,3 +19,7 @@ packages/
 *.swp
 
 config.json
+
+*.zip
+BazaarPlugin_v0.2_Release/
+Releases/
