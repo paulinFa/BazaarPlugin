@@ -1,4 +1,4 @@
-# BazaarPlugin ◈ Modern Utility for The Bazaar
+# BazaarPlugin ◈ Modern Utility for The Bazaar (v0.3)
 
 A high-end BepInEx plugin designed to enhance your **The Bazaar** experience with real-time data, searchable databases, and community-sourced Meta builds.
 
@@ -6,6 +6,28 @@ A high-end BepInEx plugin designed to enhance your **The Bazaar** experience wit
 > **Mandatory Requirements:**
 > 1. **BepInEx 5.x**: Required to load the plugin.
 > 2. **Python 3.x**: Required by the installer to generate live Meta data and images.
+> 
+> **Note:** You must know the installation folder of your game and the location of your `python.exe` to complete the setup successfully.
+
+---
+
+## 📸 Presentation & Visuals
+
+### 🗃️ The Database (F8)
+*Search for any item or skill with deep filters.*
+![Database Screenshot](docs/images/F8.png)
+
+### 🏆 Meta Browser (F7)
+*Browse Jota's latest builds with endgame board images.*
+![Meta Browser Screenshot](docs/images/F7.png)
+
+### 🔍 Hover Details (F6)
+*Real-time data overlay for any card in-game.*
+![Hover Details Screenshot](docs/images/F6.png)
+
+### 👾 Monster Info (F5)
+*High-definition portraits and stats for every encounter.*
+![Monster Info Screenshot](docs/images/F5.png)
 
 ---
 
@@ -23,48 +45,20 @@ The installer needs Python to download the latest builds from Jota's spreadsheet
 2. **Setup**: During installation, check the box **"Add Python to PATH"**.
 3. **How to find your Python path?**
    *   Open a terminal (CMD or PowerShell) and type: `where python`
-   *   It will show you the exact path (e.g., `C:\Users\...\Programs\Python\Python310\python.exe`).
 
 ---
 
-## 🚀 Version 0.2 Release
+## 🚀 Version 0.3 Release
 
-The latest release includes a **Smart Installer** that fetches live data for you!
+The latest release includes an improved **Smart Installer** with dynamic path detection and live data fetching!
 
 ### 📥 Download & Install
-1. Download the latest **`BazaarPlugin_v0.2_Release.zip`** from the [Releases](https://github.com/paulinFa/BazaarPlugin/releases) page.
+1. Download the latest **`BazaarPlugin_v0.3_Release.zip`** from the [Releases](https://github.com/paulinFa/BazaarPlugin/releases) page.
 2. Extract the zip folder.
 3. Run **`BazaarInstaller.exe`**.
 4. Select your "The Bazaar" game folder.
 5. If Python is not found automatically, the installer will ask you to select your `python.exe`.
-6. The installer will automatically install required libraries (`requests`, `Pillow`) and deploy the plugin.
-
----
-
-## 📸 Presentation & Visuals
-
-> [!TIP]
-> *Insert screenshots of the Database (F8), Meta Browser (F7), and In-game Hover (F6) here.*
-
-BazaarPlugin provides all the tools you need directly in-game: real-time monster info, a searchable card database, and the latest community builds.
-
----
-
-## ✨ Key Features
-
-### 1. 🗃️ The Bazaar Database (F8)
-*   **Search Anything**: Instantly find stats for any Item or Skill in the game.
-*   **Deep Filters**: Filter by Hero, Official Tags, or even **Hidden Mechanics** (Burn, Crit, Haste, etc.).
-
-### 2. 🏆 Meta Browser (F7)
-*   **Jota's builds**: Community-curated builds directly from Jota's Meta spreadsheet.
-*   **Board Visuals**: Live-fetched screenshots of endgame boards for every archetype.
-
-### 3. 👾 Monster Insights (F5)
-*   **Know your enemy**: Hover over any monster in-game and press F5 to see its portrait.
-
-### 4. 🔍 Smart Hover (F6)
-*   **In-Game HUD**: Hover over any card to see a detailed data overlay.
+6. The installer will automatically install required libraries and deploy the plugin.
 
 ---
 
@@ -83,9 +77,10 @@ BazaarPlugin provides all the tools you need directly in-game: real-time monster
 ## 🚧 Future Features (Roadmap)
 
 *   🛡️ **Input Protection**: Blocking mouse interactions for the background game.
-*   🖼️ **Visual Database**: High-quality icons for all items in the F8 menu.
-*   📜 **Event Details**: Showing detailed results for every event choice.
+*   🖼️ **Visual Database**: Displaying high-quality images for all items and skills in the F8 menu.
+*   📜 **Event Details**: Deep-dive into event choices, showing exactly what each option gives or takes.
 *   📊 **HUD Overhaul**: A more integrated and customizable in-game HUD for better readability.
+*   👾 **Monster Rework**: Advanced monster info section showing every card in the mob's deck, updated via a dedicated sync script.
 
 ---
 
