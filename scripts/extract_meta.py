@@ -1,6 +1,7 @@
 import csv
 import json
 import requests
+import os
 
 # Mapping des GIDs pour chaque héros
 HERO_GIDS = {
@@ -74,7 +75,9 @@ for hero, gid in HERO_GIDS.items():
 # Sauvegarde du JSON
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 BASE_DIR = os.path.dirname(SCRIPT_DIR)
-output_path = os.path.join(BASE_DIR, "BazaarPlugin", "BazaarDB", "meta_data.json")
+output_dir = os.path.join(BASE_DIR, "BazaarDB")
+os.makedirs(output_dir, exist_ok=True)
+output_path = os.path.join(output_dir, "meta_data.json")
 with open(output_path, 'w', encoding='utf-8') as f:
     json.dump(all_builds, f, indent=2, ensure_ascii=False)
 

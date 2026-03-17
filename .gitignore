@@ -1,25 +1,36 @@
-# Visual Studio 2015+
+# Visual Studio
 .vs/
 [Bb]in/
 [Oo]bj/
+src/**/[Bb]in/
+src/**/[Oo]bj/
 packages/
 *.user
 *.suo
 *.userosscache
 *.sln.docstates
 
-# BepInEx / Managed DLLs (should not be in git)
+# PyInstaller / Build outputs
+dist/
+build/
+*.spec
+
+# Plugin Data (Generated at runtime or during install)
+BazaarDB/
+src/BazaarPlugin/BazaarDB/
+
+# BepInEx / Managed DLLs
 *.dll
-!BazaarPlugin/bin/Release/BazaarPlugin.dll
+!src/BazaarPlugin/bin/Release/BazaarPlugin.dll
 *.pdb
 *.xml
 
-# User-specific
+# Archives & Releases
+*.zip
+BazaarPlugin_v*_Release/
+Releases/
+
+# User-specific & Misc
 .DS_Store
 *.swp
-
 config.json
-
-*.zip
-BazaarPlugin_v0.2_Release/
-Releases/

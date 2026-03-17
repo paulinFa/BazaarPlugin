@@ -2,13 +2,14 @@ import os
 import shutil
 import xml.etree.ElementTree as ET
 import json
+import tempfile
+import zipfile
 
 # Chemins relatifs au projet
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 BASE_DIR = os.path.dirname(SCRIPT_DIR)
-UNZIPPED_PATH = os.path.join(os.environ.get('USERPROFILE'), ".gemini", "tmp", "pauli", "bazaar_xlsx_unzipped")
-OUTPUT_BASE = os.path.join(BASE_DIR, "BazaarPlugin", "BazaarDB", "meta")
-XLSX_SOURCE = os.path.join(BASE_DIR, "meta_source", "Bazaar Meta Jota.xlsx")
+OUTPUT_BASE = os.path.join(BASE_DIR, "BazaarDB", "meta")
+XLSX_SOURCE = os.path.join(BASE_DIR, "assets", "meta_source", "Bazaar Meta Jota.xlsx")
 
 # Namespaces XML
 NS = {
@@ -18,18 +19,17 @@ NS = {
     'r': 'http://schemas.openxmlformats.org/officeDocument/2006/relationships'
 }
 
-def get_shared_strings():
-    ss_path = os.path.join(UNZIPPED_PATH, 'xl', 'sharedStrings.xml')
+def get_shared_strings(temp_path):
+    ss_path = os.path.join(temp_path, 'xl', 'sharedStrings.xml')
+    if not os.path.exists(ss_path): return []
     tree = ET.parse(ss_path)
     root = tree.getroot()
     strings = []
     for si in root.findall('ss:si', NS):
-        # Handle simple text or rich text
         t = si.find('ss:t', NS)
         if t is not None:
             strings.append(t.text if t.text else "")
         else:
-            # Join all text parts in rich text
             text_parts = []
             for r in si.findall('ss:r', NS):
                 t_part = r.find('ss:t', NS)
@@ -38,8 +38,8 @@ def get_shared_strings():
             strings.append("".join(text_parts))
     return strings
 
-def get_sheet_rels(sheet_id):
-    rels_path = os.path.join(UNZIPPED_PATH, 'xl', 'worksheets', '_rels', f'sheet{sheet_id}.xml.rels')
+def get_sheet_rels(temp_path, sheet_id):
+    rels_path = os.path.join(temp_path, 'xl', 'worksheets', '_rels', f'sheet{sheet_id}.xml.rels')
     if not os.path.exists(rels_path): return {}
     tree = ET.parse(rels_path)
     root = tree.getroot()
@@ -48,8 +48,8 @@ def get_sheet_rels(sheet_id):
         rels[rel.get('Id')] = rel.get('Target')
     return rels
 
-def get_drawing_rels(drawing_name):
-    rels_path = os.path.join(UNZIPPED_PATH, 'xl', 'drawings', '_rels', f'{drawing_name}.rels')
+def get_drawing_rels(temp_path, drawing_name):
+    rels_path = os.path.join(temp_path, 'xl', 'drawings', '_rels', f'{drawing_name}.rels')
     if not os.path.exists(rels_path): return {}
     tree = ET.parse(rels_path)
     root = tree.getroot()
@@ -58,21 +58,21 @@ def get_drawing_rels(drawing_name):
         rels[rel.get('Id')] = rel.get('Target')
     return rels
 
-def process_hero(hero_name, sheet_id, shared_strings):
-    print(f"Traitement de {hero_name}...")
+def process_hero(temp_path, hero_name, sheet_id, shared_strings):
+    print(f"Processing {hero_name}...")
     hero_output = os.path.join(OUTPUT_BASE, hero_name.upper())
     if not os.path.exists(hero_output): os.makedirs(hero_output)
 
-    # 1. Lire la feuille pour mapper row -> archetype
-    sheet_path = os.path.join(UNZIPPED_PATH, 'xl', 'worksheets', f'sheet{sheet_id}.xml')
+    sheet_path = os.path.join(temp_path, 'xl', 'worksheets', f'sheet{sheet_id}.xml')
+    if not os.path.exists(sheet_path): return
+    
     tree = ET.parse(sheet_path)
     root = tree.getroot()
     
     row_to_archetype = {}
     for row in root.findall('.//ss:row', NS):
-        row_idx = int(row.get('r')) - 1 # 0-indexed
-        # Archetype est dans la colonne A (Col 0)
-        c = row.find('ss:c[@r]', NS) # Find first cell, hope it's A
+        row_idx = int(row.get('r')) - 1
+        c = row.find('ss:c[@r]', NS)
         if c is not None and c.get('r').startswith('A'):
             t = c.get('t')
             v = c.find('ss:v', NS)
@@ -84,27 +84,22 @@ def process_hero(hero_name, sheet_id, shared_strings):
                 if name and name.strip() and name.strip().lower() not in ["archetype / variants", "variants", "vanessa builds", "dooley builds", "pyg builds", "mak builds", "stelle builds", "jules builds", "karnok builds"]:
                     row_to_archetype[row_idx] = name.strip().replace("/", "_").replace(":", "").replace('"', "")
 
-    # 2. Lire les relations pour trouver le drawing
-    sheet_rels = get_sheet_rels(sheet_id)
+    sheet_rels = get_sheet_rels(temp_path, sheet_id)
     drawing_rel_target = None
     for target in sheet_rels.values():
         if 'drawings/drawing' in target:
             drawing_rel_target = os.path.basename(target)
             break
     
-    if not drawing_rel_target:
-        print(f"Pas de dessins pour {hero_name}")
-        return
+    if not drawing_rel_target: return
 
-    # 3. Lire le drawing pour mapper row -> imageId
-    drawing_path = os.path.join(UNZIPPED_PATH, 'xl', 'drawings', drawing_rel_target)
-    drawing_rels = get_drawing_rels(drawing_rel_target)
+    drawing_path = os.path.join(temp_path, 'xl', 'drawings', drawing_rel_target)
+    drawing_rels = get_drawing_rels(temp_path, drawing_rel_target)
     
+    if not os.path.exists(drawing_path): return
     tree = ET.parse(drawing_path)
     root = tree.getroot()
     
-    # On cherche les oneCellAnchor ou twoCellAnchor
-    # Dans Google Sheets export, c'est souvent oneCellAnchor
     count = 0
     for anchor in root:
         from_tag = anchor.find('xdr:from', NS)
@@ -117,44 +112,38 @@ def process_hero(hero_name, sheet_id, shared_strings):
                     embed_id = blip.get('{http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed')
                     image_rel_path = drawing_rels.get(embed_id)
                     if image_rel_path:
-                        # image_rel_path is like ../media/image1.png
                         image_file = os.path.basename(image_rel_path)
-                        src_path = os.path.join(UNZIPPED_PATH, 'xl', 'media', image_file)
+                        src_path = os.path.join(temp_path, 'xl', 'media', image_file)
                         
-                        # Trouver l'archetype correspondant à cette ligne ou les lignes précédentes (car l'image peut être décalée)
                         archetype = None
-                        # On cherche l'archetype le plus proche au-dessus ou sur la même ligne
                         for r in range(row_idx, -1, -1):
                             if r in row_to_archetype:
                                 archetype = row_to_archetype[r]
                                 break
                         
-                        if archetype:
-                            # Gérer les multiples images par archetype (image1, image2, etc)
-                            # On va juste compter combien on en a déjà pour cet archetype
+                        if archetype and os.path.exists(src_path):
                             existing = [f for f in os.listdir(hero_output) if f.startswith(archetype)]
                             suffix = f"_{len(existing) + 1}" if len(existing) > 0 else ""
                             dest_name = f"{archetype}{suffix}.png"
                             shutil.copy(src_path, os.path.join(hero_output, dest_name))
                             count += 1
-    
-    print(f"  > {count} images extraites pour {hero_name}")
+    print(f"  > {count} images extracted for {hero_name}")
 
 def main():
-    shared_strings = get_shared_strings()
-    
-    heroes = [
-        ("Vanessa", 1),
-        ("Dooley", 2),
-        ("Pyg", 3),
-        ("Mak", 4),
-        ("Stelle", 5),
-        ("Jules", 6),
-        ("Karnok", 7)
-    ]
-    
-    for name, s_id in heroes:
-        process_hero(name, s_id, shared_strings)
+    if not os.path.exists(XLSX_SOURCE):
+        print(f"Error: {XLSX_SOURCE} not found.")
+        return
+
+    with tempfile.TemporaryDirectory() as temp_dir:
+        print(f"Extracting Excel to {temp_dir}...")
+        with zipfile.ZipFile(XLSX_SOURCE, 'r') as zip_ref:
+            zip_ref.extractall(temp_dir)
+            
+        shared_strings = get_shared_strings(temp_dir)
+        heroes = [("Vanessa", 1), ("Dooley", 2), ("Pyg", 3), ("Mak", 4), ("Stelle", 5), ("Jules", 6), ("Karnok", 7)]
+        
+        for name, s_id in heroes:
+            process_hero(temp_dir, name, s_id, shared_strings)
 
 if __name__ == "__main__":
     main()

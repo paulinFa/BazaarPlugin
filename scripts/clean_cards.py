@@ -1,13 +1,20 @@
 import json
 import os
 import re
+import sys
 
-# --- GESTION DES CHEMINS DYNAMIQUES (LOCAUX AU PROJET) ---
+# --- GESTION DES CHEMINS DYNAMIQUES ---
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 BASE_DIR = os.path.dirname(SCRIPT_DIR)
-# On utilise le cards.json que l'on a copié dans data_source
-INPUT_FILE = os.path.join(BASE_DIR, 'data_source', 'cards.json')
-OUTPUT_DIR = os.path.join(BASE_DIR, 'BazaarPlugin', 'BazaarDB')
+
+# Par défaut, on cherche dans data_source, mais on peut passer le dossier du jeu en argument
+if len(sys.argv) > 1:
+    game_path = sys.argv[1]
+    INPUT_FILE = os.path.join(game_path, "TheBazaar_Data", "StreamingAssets", "cards.json")
+else:
+    INPUT_FILE = os.path.join(BASE_DIR, 'assets', 'data_source', 'cards.json')
+
+OUTPUT_DIR = os.path.join(BASE_DIR, 'BazaarDB')
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, 'clean_cards.json')
 

@@ -7,7 +7,7 @@ XLSX_URL = "https://docs.google.com/spreadsheets/d/1PE3qqsS5qjOzrqzWkCIv6rRRV0Ny
 # Paths
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 BASE_DIR = os.path.dirname(SCRIPT_DIR)
-OUTPUT_DIR = os.path.join(BASE_DIR, "meta_source")
+OUTPUT_DIR = os.path.join(BASE_DIR, "assets", "meta_source")
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, "Bazaar Meta Jota.xlsx")
 
 def download_excel():

@@ -6,14 +6,12 @@ A high-end BepInEx plugin designed to enhance your **The Bazaar** experience wit
 > **Mandatory Requirements:**
 > 1. **BepInEx 5.x**: Required to load the plugin.
 > 2. **Python 3.x**: Required by the installer to generate live Meta data and images.
-> 
-> **Note:** You must know the installation folder of your game and the location of your `python.exe` to complete the setup successfully.
 
 ---
 
 ## 📸 Presentation & Visuals
 
-### 🗃️ The Database (F8)
+### 🗃️ Card Database (F8)
 *Search for any item or skill with deep filters.*
 ![Database Screenshot](docs/images/F8.png)
 
@@ -42,51 +40,78 @@ To use this plugin, you **must** have **BepInEx 5.x (x64)** installed in your ga
 ### 2. Python 3.x
 The installer needs Python to download the latest builds from Jota's spreadsheet and extract board images.
 1. **Download**: Install Python from [python.org](https://www.python.org/downloads/) or the Microsoft Store.
-2. **Setup**: During installation, check the box **"Add Python to PATH"**.
-3. **How to find your Python path?**
+2. **How to find your Python path?**
    *   Open a terminal (CMD or PowerShell) and type: `where python`
+   *   If it's not found, you can manually select the `python.exe` in the installer.
 
 ---
 
-## 🚀 Version 0.3 Release
-
-The latest release includes an improved **Smart Installer** with dynamic path detection and live data fetching!
+## 🚀 Installation & Deployment
 
 ### 📥 Download & Install
-1. Download the latest **`BazaarPlugin_v0.3_Release.zip`** from the [Releases](https://github.com/paulinFa/BazaarPlugin/releases) page.
+1. Download the latest **`BazaarPlugin_Release.zip`** from the [Releases](https://github.com/paulinFa/BazaarPlugin/releases) page.
 2. Extract the zip folder.
 3. Run **`BazaarInstaller.exe`**.
-4. Select your "The Bazaar" game folder.
+4. Select your "The Bazaar" game folder (e.g., `E:\Programmes\Steam\steamapps\common\The Bazaar`).
 5. If Python is not found automatically, the installer will ask you to select your `python.exe`.
-6. The installer will automatically install required libraries and deploy the plugin.
+6. The installer will automatically update Meta data and deploy the plugin files.
 
 ---
 
-## 🛠️ Controls
+## 🛠️ In-Game Controls
 
 | Key | Action |
 | :--- | :--- |
-| **F5** | Toggle **Monster Info** (Hover over a mob) |
-| **F6** | Toggle **Hover Overlay** (Hover over a card) |
+| **F5** | Toggle **Monster Info** (On hover) |
+| **F6** | Toggle **Hover Overlay** (On hover) |
 | **F7** | Open **Meta Browser** |
 | **F8** | Open **Card Database** |
-| **F9** | Toggle **Focus Mode** (Syncs hover with selection) |
-
----
-
-## 🚧 Future Features (Roadmap)
-
-*   🛡️ **Input Protection**: Blocking mouse interactions for the background game.
-*   🖼️ **Visual Database**: Displaying high-quality images for all items and skills in the F8 menu.
-*   📜 **Event Details**: Deep-dive into event choices, showing exactly what each option gives or takes.
-*   📊 **HUD Overhaul**: A more integrated and customizable in-game HUD for better readability.
-*   👾 **Monster Rework**: Advanced monster info section showing every card in the mob's deck, updated via a dedicated sync script.
+| **F9** | Toggle **Focus Mode** |
 
 ---
 
 ## 📁 Project Structure (Developers)
 
-*   `BazaarPlugin/`: C# source code.
-*   `scripts/`: Python utility scripts for data processing.
-*   `SETUP_PLUGIN.bat`: One-click developer setup.
-*   `build_and_deploy.ps1`: Automated build and deployment.
+The project is divided into several folders to separate source code from data processing tools.
+
+### 📂 `src/` (Source Code)
+*   Contains the **C# project (BazaarPlugin.csproj)**.
+*   BepInEx plugin logic and Unity UI.
+
+### 📂 `assets/` (Raw Resources)
+*   **`mob/`** : High-definition monster portraits (PNG).
+*   **`data_source/`** : Local JSON files.
+*   **`meta_source/`** : Downloaded Meta Excel file.
+
+### 📂 `scripts/` (Data Processing)
+*   **`clean_cards.py`** : Cleans card descriptions from the game files.
+*   **`download_meta_excel.py`** : Downloads Jota's latest XLSX.
+*   **`extract_meta.py`** : Extracts builds into JSON format.
+*   **`extract_xlsx_images.py`** : Extracts endgame board images.
+
+### 📂 `tools/` (Build & Packaging)
+*   **`deploy_plugin.py`** : Source code for the installer.
+*   **`make_release.py`** : Script to compile and package the release into `dist/`.
+
+### 📂 `dist/` (Output & Distribution)
+This folder is generated during the build process and contains the final files:
+*   **`BazaarInstaller.exe`**: The standalone installer compiled from `deploy_plugin.py`.
+*   **`BazaarPlugin_Release/`**: The **complete portable package**. This is the folder you should zip and share with users. It contains the DLL, the installer, and all required assets and scripts.
+
+---
+
+## 🏗️ Build Cycle (Developers)
+
+To generate a new version of the plugin:
+1.  Modify the C# code in `src/`.
+2.  Run: `python tools/make_release.py` from the root.
+3.  The complete folder will be in `dist/BazaarPlugin_Release`.
+
+---
+
+## 🚧 Roadmap
+
+*   🛡️ Input protection (blocking clicks through UI).
+*   🖼️ High-quality images in the F8 database.
+*   📜 Deep-dive into event details.
+*   📊 HUD overhaul for better integration.
